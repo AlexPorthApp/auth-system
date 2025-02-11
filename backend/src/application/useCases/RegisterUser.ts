@@ -9,6 +9,7 @@ export class RegisterUser {
 
   async execute(name: string, email: string, password: string) {
     const existingUser = await this.userRepository.findByEmail(email);
+    
     if (existingUser) throw new Error("User already exists");
 
     const hashedPassword = await BcryptService.hashPassword(password);
