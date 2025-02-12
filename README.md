@@ -35,6 +35,8 @@ Antes de comenzar, asegúrate de tener las siguientes herramientas instaladas:
 
 ```bash
   DATABASE_URL="postgresql://usuario:contraseña@localhost:5432/<db-name>?schema=public"
+  JWT_SECRET=
+  PORT=3001
 ```
 
 4. Realiza las migraciones para crear las tablas necesarias en la base de datos:
